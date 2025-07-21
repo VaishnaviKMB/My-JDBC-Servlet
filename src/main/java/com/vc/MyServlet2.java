@@ -66,10 +66,12 @@ public class MyServlet2 extends HttpServlet {
 			if (rs.next()) {
 				RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
 				dispatcher.forward(request, response);
+				//response.sendRedirect("home.html");
 			} 
 			else {
 				RequestDispatcher dispatcher = request.getRequestDispatcher("error.jsp");
 				dispatcher.forward(request, response);
+				//response.sendRedirect("error.html");
 
 			}
 

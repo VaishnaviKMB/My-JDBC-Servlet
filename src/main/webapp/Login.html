@@ -2,19 +2,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
+    <style>
+        body { text-align: center; font-family: Arial; background-color: #e0f7fa; }
+        form { background: #fff; display: inline-block; padding: 20px; border-radius: 8px; margin-top: 50px; }
+        input { display: block; margin: 10px auto; padding: 10px; width: 80%; }
+    </style>
 </head>
 <body>
 <h2> WELCOME TO LOGIN PAGE</h2>
 <p>Enter your credentials</p>
-<form action="Login" method="post">
-	<input type="text" name="tbName" placeholder="Enter your Name">
+<form action="Login" method="post" onsubmit="return validateLogin()">
+	<input type="text" name="tbName" placeholder="Enter your Name" id="tbName">
 	<br>
-	<input type="password" name="tbPass" placeholder="Enter your Password">
+	<input type="password" name="tbPass" placeholder="Enter your Password" id="tbPass">
 	<br>
 	<input type="submit" value="Login">
 	<br>
 </form>
+<script>
+        function validateLogin() {
+            let name = document.getElementById("tbName").value.trim();
+            let pass = document.getElementById("tbPass").value.trim();
+            if (name === "" || pass === "") {
+                alert("Please fill out both fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 
 </body>
 </html>

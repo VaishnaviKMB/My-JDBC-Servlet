@@ -4,7 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+ <title>Error</title>
+    <style>
+        body { text-align: center; font-family: Arial; background-color: #ffe0e0; margin-top: 50px; }
+        a { text-decoration: none; color: blue; }
+    </style>
 </head>
 <body>
 <p>Please check your credentials</p>

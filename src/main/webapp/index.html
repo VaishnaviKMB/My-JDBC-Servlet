@@ -2,20 +2,36 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Register</title>
+    <style>
+        body { text-align: center; font-family: Arial; background-color: #f2f2f2; }
+        form { background: #fff; display: inline-block; padding: 20px; border-radius: 8px; margin-top: 50px; }
+        input { display: block; margin: 10px auto; padding: 10px; width: 80%; }
+    </style>
 </head>
 <body>
-	<h1 style="text-align:center;">WELCOME TO OUR WEBSITE</h1>
-	<h3>Please Register yourself</h3>
-	<form action="Register" method="post">
-	<input type="text" name="tbName" placeholder="Enter your Name">
-	<br>
-	<input type="password" name="tbPass" placeholder="Enter your Password">
-	<br>
+	<h1>Welcome to Our Website</h1>
+    <h3>Please Register</h3>
+	<form action="Register" method="post" onsubmit="return validateForm()">
+	<input type="text" name="tbName" placeholder="Enter your Name" id="tbName">
+	
+	<input type="password" name="tbPass" placeholder="Enter your Password" id="tbPass">
+	
 	<input type="submit" value="REGISTER">
-	<br>
+	
 	
 	</form>
+	<script>
+        function validateForm() {
+            let name = document.getElementById("tbName").value.trim();
+            let pass = document.getElementById("tbPass").value.trim();
+            if (name === "" || pass === "") {
+                alert("All fields are required!");
+                return false;
+            }
+            return true;
+        }
+    </script>
 	
 	<h6>Are you already a user</h6>
 	<a href="Login.html">click here</a>
